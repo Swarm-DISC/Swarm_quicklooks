@@ -1,0 +1,11 @@
+notebooks:
+  - notebooks/01a1_Outreach-Report.ipynb
+secret:
+  - .env
+ignore:
+  - __pycache__
+  - .git
+  - src
+  - .ipynb_checkpoints
+  - "**/*pyc"
+  - "**.vscode"
