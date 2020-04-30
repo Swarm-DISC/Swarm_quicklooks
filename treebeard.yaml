@@ -1,11 +1,13 @@
+# Remove this line to run all '**/*.ipynb'
 notebooks:
   - notebooks/01a1_Outreach-Report.ipynb
+# .env contains VIRES_TOKEN=***
 secret:
   - .env
 ignore:
   - __pycache__
   - .git
   - src
-  - .ipynb_checkpoints
+  - "**/.ipynb_checkpoints"
   - "**/*pyc"
   - "**.vscode"
