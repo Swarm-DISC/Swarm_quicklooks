@@ -14,6 +14,3 @@ conda build MagneticModel/qdipole
 conda install --quiet --yes --use-local qdipole cdf
 pip install spacepy
 
-
-pip install MagneticModel/eoxmagmod
-python -m set_token
