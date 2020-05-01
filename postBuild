@@ -6,7 +6,7 @@ pip install chaosmagpy # depends on hdf5storage
 
 # eoxmagmod installation
 branch=staging
-wget --no-verbose https://github.com/ESA-VirES/MagneticModel/archive/"$branch".zip -O MagneticModel.zip
+wget --no-verbose https://github.com/treebeardtech/MagneticModel/archive/"$branch".zip -O MagneticModel.zip
 unzip MagneticModel.zip
 mv MagneticModel-"$branch" MagneticModel
 conda build MagneticModel/libcdf
