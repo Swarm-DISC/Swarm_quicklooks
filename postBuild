@@ -2,4 +2,18 @@
 set -euo pipefail
 set -x
 
+pip install chaosmagpy # depends on hdf5storage
+
+# eoxmagmod installation
+branch=staging
+wget --no-verbose https://github.com/ESA-VirES/MagneticModel/archive/"$branch".zip -O MagneticModel.zip
+unzip MagneticModel.zip
+mv MagneticModel-"$branch" MagneticModel
+conda build MagneticModel/libcdf
+conda build MagneticModel/qdipole
+conda install --quiet --yes --use-local qdipole cdf
+pip install spacepy
+
+
+pip install MagneticModel/eoxmagmod
 python -m set_token

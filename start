@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+set -x
+
+export CDF_LIB=/srv/conda/envs/notebook/lib
+
+treebeard run --dockerless --confirm
