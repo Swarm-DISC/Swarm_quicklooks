@@ -25,7 +25,7 @@ def grid(nlats=180, nlons=360, height=0):
 
 
 def eval_model(time=dt.datetime(2020, 1, 1), coords=grid(),
-               shc_model=eoxmagmod.data.CHAOS_CORE_LATEST):
+               shc_model=eoxmagmod.data.IGRF13):
     """Evaluate a .shc model at a fixed time
 
     Args:
