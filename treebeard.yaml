@@ -1,8 +1,8 @@
 # Remove this line to run all '**/*.ipynb'
 notebooks:
   - notebooks/01a1_Outreach-Report.ipynb
-# .env contains VIRES_TOKEN=***
 secret:
+# .env contains VIRES_TOKEN=***
   - .env
 ignore:
   - __pycache__
@@ -12,3 +12,5 @@ ignore:
   - "**/*pyc"
   - "**.vscode"
   - "MagneticModel*"
+output_dirs:
+  - notebooks/output
