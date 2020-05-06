@@ -12,6 +12,7 @@ dependencies:
   - scipy
   - xarray
   - matplotlib
+  - gdal
   - cartopy
   - cdflib
   - pip
