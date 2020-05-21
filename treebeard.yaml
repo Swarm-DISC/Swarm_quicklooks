@@ -14,3 +14,4 @@ ignore:
   - "MagneticModel*"
 output_dirs:
   - notebooks/output
+schedule: 'daily'
