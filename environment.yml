@@ -17,7 +17,6 @@ dependencies:
   - cdflib
   - pip
   - pip:
-      - treebeard
       - watermark
       - viresclient
       - python-dotenv
