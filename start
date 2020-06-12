@@ -8,4 +8,5 @@ python -m set_token
 
 export CDF_LIB=/srv/conda/envs/notebook/lib
 
-pip install treebeard && treebeard run --dockerless --confirm
+pip install treebeard
+treebeard run --dockerless --confirm --upload
