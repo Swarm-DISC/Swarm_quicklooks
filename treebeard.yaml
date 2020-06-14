@@ -15,3 +15,4 @@ ignore:
 output_dirs:
   - notebooks/output
 schedule: 'daily'
+cell_execution_timeout_seconds: 600
