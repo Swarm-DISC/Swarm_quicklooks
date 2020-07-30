@@ -21,3 +21,4 @@ dependencies:
       - viresclient
       - python-dotenv
       - hdf5storage # for chaosmagpy
+      - ffnet # for spacepy
