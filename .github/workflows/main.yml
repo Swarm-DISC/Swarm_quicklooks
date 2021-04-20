@@ -26,4 +26,4 @@ jobs:
               jupyter-book build .
               '
       - name: Deploy preview with netlify
-        run: netlify deploy --dir=_build/html --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} --site=${{ secrets.NETLIFY_SITE_API_ID }}
+        run: netlify deploy --dir=_build/html --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} --site=${{ secrets.NETLIFY_SITE_API_ID }} --prod
