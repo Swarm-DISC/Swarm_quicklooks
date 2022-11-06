@@ -17,10 +17,9 @@ jobs:
         run: |
           docker run -v $GITHUB_WORKSPACE:/home/jovyan -u root \
             -e VIRES_TOKEN=${{ secrets.VIRES_TOKEN }} \
-            registry.gitlab.eox.at/esa/vires_vre_ops/vre-swarm-notebook:0.8.0 \
+            registry.gitlab.eox.at/esa/vires_vre_ops/vre-swarm-notebook:0.10.8 \
             bash -c \
               '
-              mamba install -c conda-forge -y cartopy=0.19.* && \
               export CDF_LIB=/opt/conda/lib && \
               viresclient set_token https://vires.services/ows $VIRES_TOKEN && \
               viresclient set_default_server https://vires.services/ows && \
