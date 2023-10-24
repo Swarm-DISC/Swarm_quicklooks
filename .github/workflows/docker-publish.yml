@@ -3,7 +3,7 @@ name: Create and publish a Docker image
 
 on:
   push:
-    branches: ['main', 'create-docker-image']
+    branches: ['main', 'create-docker-images']
   pull_request:
     branches: ['main']
 
