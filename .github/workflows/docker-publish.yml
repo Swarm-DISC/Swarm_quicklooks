@@ -1,10 +1,16 @@
 # See https://docs.github.com/en/actions/publishing-packages/publishing-docker-images
 name: Create and publish a Docker image
 
+# Only run this if changes are proposed within the ./docker/ directory
 on:
+  workflow_dispatch:
   push:
-    branches: ['main', 'create-docker-images']
+    paths:
+      - 'docker/*'
+    branches: ['main']
   pull_request:
+    paths:
+      - 'docker/*'
     branches: ['main']
 
 # Defines two custom environment variables for the workflow. These are used for the Container registry domain, and a name for the Docker image that this workflow builds.
