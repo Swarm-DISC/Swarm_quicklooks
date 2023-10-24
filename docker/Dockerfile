@@ -8,13 +8,12 @@ RUN mamba install nb_conda_kernels
 # -----------------
 
 # Use the lock file to create the conda environment named swarmpal
-COPY environments/swarmpal/conda-linux-64.lock /locks/swarmpal.lock
-RUN mamba create -n swarmpal --file /locks/swarmpal.lock
+COPY environments/swarmpal-runner/conda-linux-64.lock /locks/swarmpal-runner.lock
+RUN mamba create -n swarmpal-runner --file /locks/swarmpal-runner.lock
 RUN mamba clean -afy
 # Install the remaining pip packages (in the swarmpal environment)
-COPY environments/swarmpal/requirements.txt /locks/swarmpal-requirements.txt
-RUN mamba run -n swarmpal pip install -r /locks/swarmpal-requirements.txt
-
+COPY environments/swarmpal-runner/requirements.txt /locks/swarmpal-runner-requirements.txt
+RUN mamba run -n swarmpal-runner pip install -r /locks/swarmpal-runner-requirements.txt
 
 # -----------------
 # jupyterbook+nbmake environment
@@ -24,3 +23,11 @@ RUN mamba run -n swarmpal pip install -r /locks/swarmpal-requirements.txt
 COPY environments/jupyterbook/conda-linux-64.lock /locks/jupyterbook.lock
 RUN mamba create -n jupyterbook --file /locks/jupyterbook.lock
 RUN mamba clean -afy
+
+# -----------------
+# Additional configuration steps
+# -----------------
+
+# Install the swarmpal kernel to make it available to jupyter
+RUN mamba run --no-capture-output -n swarmpal-runner \
+        python -m ipykernel install --user --name swarmpal-runner

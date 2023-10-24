@@ -1,10 +1,11 @@
-name: swarmpal
+name: swarmpal-runner
 channels:
   - conda-forge
 dependencies:
   - python=3.11
   - pip
   - ipykernel
+  - watermark
   # swarmpal dependencies
   - cartopy
   - dask
