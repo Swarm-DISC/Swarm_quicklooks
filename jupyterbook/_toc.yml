@@ -1,2 +1,4 @@
 format: jb-book
 root: notebooks/intro
+chapters:
+- file: notebooks/fac-test
